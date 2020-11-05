@@ -1,0 +1,451 @@
+    1  npx create-react-app CRAProject
+    2  ls
+    3  pip install serial
+    4  npm install
+    5  npm test
+    6  npm test
+    7  exercism download --exercise=hello-world --track=javascript
+    8  #!/usr/bin/env sh
+    9  # $Id: HardwareSimulator.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
+   10  # mark.armbrust@pobox.com
+   11  # User's CDPATH can interfere with cd in this script
+   12  unset CDPATH
+   13  # Get the true name of this script
+   14  script="`test -L "$0" && readlink -n "$0" || echo "$0"`"
+   15  dir="$PWD"
+   16  cd "`dirname "$script"`"
+   17  if [ \( $# -gt 1 \) -o \( "$1" = "-h" \) -o \( "$1" = "--help" \) ]; then 	echo "Usage:"; 	echo "    `basename "$0"`             Starts the Hardware Simulator in"; 	echo "                                     interactive mode."; 	echo "    `basename "$0"` FILE.tst    Starts the Hardware Simulator and runs the"; 	echo "                                     FILE.tst test script.  The success/failure"; 	echo "                                     message is printed to the command console."; elif [ $# -eq 0 ]; then 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain & else 	if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]; 	then 		arg1="$1"; 	else 		arg1="${dir}/$1"; 	fi 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain "$arg1"; fi
+   18  #!/usr/bin/env sh
+   19  # $Id: HardwareSimulator.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
+   20  # mark.armbrust@pobox.com
+   21  # User's CDPATH can interfere with cd in this script
+   22  unset CDPATH
+   23  # Get the true name of this script
+   24  script="`test -L "$0" && readlink -n "$0" || echo "$0"`"
+   25  dir="$PWD"
+   26  cd "`dirname "$script"`"
+   27  if [ \( $# -gt 1 \) -o \( "$1" = "-h" \) -o \( "$1" = "--help" \) ]; then 	echo "Usage:"; 	echo "    `basename "$0"`             Starts the Hardware Simulator in"; 	echo "                                     interactive mode."; 	echo "    `basename "$0"` FILE.tst    Starts the Hardware Simulator and runs the"; 	echo "                                     FILE.tst test script.  The success/failure"; 	echo "                                     message is printed to the command console."; elif [ $# -eq 0 ]; then 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain & else 	if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]; 	then 		arg1="$1"; 	else 		arg1="${dir}/$1"; 	fi 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain "$arg1"; fi
+   28  #!/usr/bin/env sh
+   29  # $Id: HardwareSimulator.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
+   30  # mark.armbrust@pobox.com
+   31  # User's CDPATH can interfere with cd in this script
+   32  unset CDPATH
+   33  # Get the true name of this script
+   34  script="`test -L "$0" && readlink -n "$0" || echo "$0"`"
+   35  dir="$PWD"
+   36  cd "`dirname "$script"`"
+   37  if [ \( $# -gt 1 \) -o \( "$1" = "-h" \) -o \( "$1" = "--help" \) ]; then 	echo "Usage:"; 	echo "    `basename "$0"`             Starts the Hardware Simulator in"; 	echo "                                     interactive mode."; 	echo "    `basename "$0"` FILE.tst    Starts the Hardware Simulator and runs the"; 	echo "                                     FILE.tst test script.  The success/failure"; 	echo "                                     message is printed to the command console."; elif [ $# -eq 0 ]; then 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain & else 	if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]; 	then 		arg1="$1"; 	else 		arg1="${dir}/$1"; 	fi 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain "$arg1"; fi
+   38  #!/usr/bin/env sh
+   39  # $Id: HardwareSimulator.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
+   40  # mark.armbrust@pobox.com
+   41  # User's CDPATH can interfere with cd in this script
+   42  unset CDPATH
+   43  # Get the true name of this script
+   44  script="`test -L "$0" && readlink -n "$0" || echo "$0"`"
+   45  dir="$PWD"
+   46  cd "`dirname "$script"`"
+   47  if [ \( $# -gt 1 \) -o \( "$1" = "-h" \) -o \( "$1" = "--help" \) ]; then 	echo "Usage:"; 	echo "    `basename "$0"`             Starts the Hardware Simulator in"; 	echo "                                     interactive mode."; 	echo "    `basename "$0"` FILE.tst    Starts the Hardware Simulator and runs the"; 	echo "                                     FILE.tst test script.  The success/failure"; 	echo "                                     message is printed to the command console."; elif [ $# -eq 0 ]; then 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain & else 	if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]; 	then 		arg1="$1"; 	else 		arg1="${dir}/$1"; 	fi 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain "$arg1"; fi
+   48  #!/usr/bin/env sh
+   49  # $Id: HardwareSimulator.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
+   50  # mark.armbrust@pobox.com
+   51  # User's CDPATH can interfere with cd in this script
+   52  unset CDPATH
+   53  # Get the true name of this script
+   54  script="`test -L "$0" && readlink -n "$0" || echo "$0"`"
+   55  dir="$PWD"
+   56  cd "`dirname "$script"`"
+   57  if [ \( $# -gt 1 \) -o \( "$1" = "-h" \) -o \( "$1" = "--help" \) ]; then 	echo "Usage:"; 	echo "    `basename "$0"`             Starts the Hardware Simulator in"; 	echo "                                     interactive mode."; 	echo "    `basename "$0"` FILE.tst    Starts the Hardware Simulator and runs the"; 	echo "                                     FILE.tst test script.  The success/failure"; 	echo "                                     message is printed to the command console."; elif [ $# -eq 0 ]; then 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain & else 	if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]; 	then 		arg1="$1"; 	else 		arg1="${dir}/$1"; 	fi 	java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain "$arg1"; fi
+   58  make
+   59  python imgurdownloader.py 
+   60  python imgur_downloader https://imgur.com/a/TeD4pSl
+   61  imgur_downloader https://imgur.com/a/TeD4pSl
+   62  python
+   63  python
+   64  python
+   65  python
+   66  python
+   67  python imgurdownloader.py 
+   68  git global
+   69  git clone https://github.com/ArchGrif/ESP_Prac1.git
+   70  ls
+   71  cd ..
+   72  ls
+   73  cd Git gud
+   74  ls
+   75  cd Git\ gud/
+   76  cd ESP_Prac1/
+   77  ls
+   78  git status
+   79  git status
+   80  git add .
+   81  git commit -m "STABLE: ADC Setup with Screen, ADC Pin PA7 changed, Clock Working"
+   82  git status
+   83  git push
+   84  bsp-editor &
+   85  #!/bin/bash
+   86  ############################################################
+   87  #                                                          #
+   88  # Intel FPGA SoC Embedded Command Shell                    #
+   89  #                                                          #
+   90  #                                                          #
+   91  # Copyright (c) 2018 Intel Corporation                     #
+   92  # All Rights Reserved.                                     #
+   93  #                                                          #
+   94  ############################################################
+   95  ############################################################
+   96  #
+   97  # Get the Root SOCEDS directory
+   98  #
+   99  if [ -n "${COMSPEC}" ]; then     _IS_WINDOWS=1;       if [ "${SOCEDS_DESTROY_PATH}" == "1" ]; then	         export ORIGINAL_PATH="${PATH}";         PATH="/bin:/usr/bin";     fi; fi
+  100  if [ "${_IS_WINDOWS}" = "1" ] && [ -n "$(which cygpath 2>/dev/null)" ]; then     _IS_CYGWIN=1; fi
+  101  _SOCEDS_ROOT=$(cd "$(dirname "${0}")" && echo "$(pwd 2>/dev/null)")
+  102  if [ ! -d "${_SOCEDS_ROOT}" ]; then     echo "${_SOCEDS_ROOT} not found. Invalid or corrupt SOCEDS Install" 1>&2;     exit 1; fi
+  103  export SOCEDS_DEST_ROOT="${_SOCEDS_ROOT}"
+  104  if [ "${_IS_CYGWIN}" == "1" ]; then     SOCEDS_DEST_ROOT="$(cygpath -m "${SOCEDS_DEST_ROOT}" 2>/dev/null)"; fi
+  105  source "${_SOCEDS_ROOT}/env.sh"
+  106  ############################################################
+  107  unset _SOCEDS_ROOT
+  108  unset _IS_WINDOWS
+  109  unset _IS_CYGWIN
+  110  if [ -n "$*" ]; then     exec "$@"; else     echo "------------------------------------------------";     echo "Intel FPGA Embedded Command Shell";     echo;     echo "Version 18.1 [Build 625]";     echo "------------------------------------------------";      exec bash; fi
+  111  bsp-editor
+  112  #!/bin/bash
+  113  ############################################################
+  114  #                                                          #
+  115  # Intel FPGA SoC Embedded Command Shell                    #
+  116  #                                                          #
+  117  #                                                          #
+  118  # Copyright (c) 2018 Intel Corporation                     #
+  119  # All Rights Reserved.                                     #
+  120  #                                                          #
+  121  ############################################################
+  122  ############################################################
+  123  #
+  124  # Get the Root SOCEDS directory
+  125  #
+  126  if [ -n "${COMSPEC}" ]; then     _IS_WINDOWS=1;       if [ "${SOCEDS_DESTROY_PATH}" == "1" ]; then	         export ORIGINAL_PATH="${PATH}";         PATH="/bin:/usr/bin";     fi; fi
+  127  if [ "${_IS_WINDOWS}" = "1" ] && [ -n "$(which cygpath 2>/dev/null)" ]; then     _IS_CYGWIN=1; fi
+  128  _SOCEDS_ROOT=$(cd "$(dirname "${0}")" && echo "$(pwd 2>/dev/null)")
+  129  if [ ! -d "${_SOCEDS_ROOT}" ]; then     echo "${_SOCEDS_ROOT} not found. Invalid or corrupt SOCEDS Install" 1>&2;     exit 1; fi
+  130  export SOCEDS_DEST_ROOT="${_SOCEDS_ROOT}"
+  131  if [ "${_IS_CYGWIN}" == "1" ]; then     SOCEDS_DEST_ROOT="$(cygpath -m "${SOCEDS_DEST_ROOT}" 2>/dev/null)"; fi
+  132  source "${_SOCEDS_ROOT}/env.sh"
+  133  ############################################################
+  134  unset _SOCEDS_ROOT
+  135  unset _IS_WINDOWS
+  136  unset _IS_CYGWIN
+  137  if [ -n "$*" ]; then     exec "$@"; else     echo "------------------------------------------------";     echo "Intel FPGA Embedded Command Shell";     echo;     echo "Version 18.1 [Build 625]";     echo "------------------------------------------------";      exec bash; fi
+  138  cd ..
+  139  cd ..
+  140  ls
+  141  cd ..
+  142  ls
+  143  cg /e
+  144  cd /e
+  145  ls
+  146  cd OneDrive
+  147  ls
+  148  cd OneDrive - University of Pretoria
+  149  cd OneDrive\ -\ University\ of\ Pretoria/University\ Stuff/
+  150  cd 4th\ Year\ 1st\ Sem/
+  151  cd eas
+  152  cd Practical\ 1/
+  153  ls
+  154  cd my_first_hps-fpga_base/
+  155  ls
+  156  ./generate_hps_qsys_header.sh 
+  157  git clone https://repo.ee.up.ac.za/eece_ugfyp_tg/tg4-subhan.git
+  158  git status
+  159  cd tg4-subhan/
+  160  git status
+  161  clear
+  162  git branch labbook
+  163  git checkout labbook 
+  164  cd labbook
+  165  git remote add overleaf https://git.overleaf.com/5e6fcd89bf86bd0001072e97
+  166  git checkout master
+  167  git pull overleaf master
+  168  git pull overleaf master --allow-unrelated-histories 
+  169  git revert --mainline 1 HEAD
+  170  git push overleaf master
+  171  git status
+  172  git push overleaf master
+  173  git add *
+  174  git status
+  175  git add .DS_Store 
+  176  git push overleaf master
+  177  git push
+  178  git commit -m "Setting up Lab Book"
+  179  git push overleaf master
+  180  cd ..
+  181  ls
+  182  git status
+  183  git push master
+  184  git push
+  185  git status
+  186  git add Project\ Proposal/
+  187  git status
+  188  git status
+  189  git commit -m "Added Proposal"
+  190  git push master
+  191  git push
+  192  git status
+  193  git commit -a
+  194  git status
+  195  git push
+  196  git push overleaf master
+  197  git pull overleaf master
+  198  git push overleaf master
+  199  git status
+  200  git add Project_Proposal/ProjectProposalTemplate2020_normal.pdf 
+  201  git status
+  202  git push
+  203  git commit -m "Project Proposal"
+  204  git push
+  205  git pull overleaf master
+  206  git status
+  207  git commit -m "Updated Specs"
+  208  git status
+  209  git add Project_Proposal/ProjectProposalTemplate2020_normal.pdf 
+  210  git commit -m "Updated Lab book"
+  211  git push
+  212  git status
+  213  git add *
+  214  git status
+  215  git commit -m "Project Proposal Update"
+  216  git push
+  217  git pull overleaf master 
+  218  git status
+  219  git push
+  220  git status
+  221  git add 
+  222  git add .
+  223  git status
+  224  git commit -m "Proposed final project proposal draft"
+  225  git push
+  226  git status
+  227  git add Project_Proposal/ProjectProposal2020_draft.pdf Project_Proposal/Rev_Function_Diag.jpg
+  228  git status
+  229  git commit -m "Updated Project Proposal"
+  230  git push
+  231  git status
+  232  git add *
+  233  git status
+  234  git commit -m "Proposal Feedback Changes"
+  235  git push
+  236  git status
+  237  git add *
+  238  git commit -m "Made suggested changes to language and spec refinement"
+  239  git push
+  240  git add *
+  241  git commit -m "Made suggested changes to language and spec refinement"
+  242  git push
+  243  git status
+  244  git add *
+  245  git commit -m "Made suggested changes to language and spec refinement"
+  246  git push
+  247  git status
+  248  git pull remote
+  249  git pull remote overleaf
+  250  git pull overleaf master
+  251  git status
+  252  git push
+  253  git pull
+  254  git push
+  255  git add Project_Gantt_Chart.JPG 
+  256  git commit -m "Added Initial Project Plan"
+  257  git push
+  258  git add Project_Gantt_Chart.JPG 
+  259  git commit -m "Updated project timeline- minor"
+  260  git push
+  261  git pull overleaf master
+  262  git status
+  263  git add *
+  264  git commit -m "Added 2 sims, facial research"
+  265  git push
+  266  git pull overleaf 
+  267  git pull overleaf master
+  268  git status
+  269  git add OpenCV_Sim/ssim_test.py OpenCV_Sim/steg_test.py 
+  270  git push
+  271  git commit -m "Added Steg and SSIM"
+  272  git push
+  273  git pull
+  274  cd ..
+  275  git pull
+  276  cd EPR\ Gitlab/
+  277  ls
+  278  cd tg4-subhan/
+  279  git pull
+  280  git pull overleaf
+  281  git pull overleaf master
+  282  git status
+  283  git add*
+  284  git add *
+  285  git pull overleaf master
+  286  git status
+  287  git add *
+  288  git status
+  289  git commit -m "Added in some steg stuff to lab book"
+  290  git push
+  291  git pull overleaf
+  292  git pull overleaf master
+  293  git status
+  294  git commit 
+  295  git push
+  296  git pull master overleaf
+  297  git pull overleaf 
+  298  git pull overleaf master 
+  299  git status
+  300  git add OpenCV_Sim/dct_test.py OpenCV_Sim/svd_test.py 
+  301  git commit -m "SVD and DCT tries"
+  302  git push
+  303  git pull overleaf
+  304  cd tg4-subhan/
+  305  git pull overleaf
+  306  git pull overleaf master
+  307  git status
+  308  git add Sub_Unit_Implementation/
+  309  git commit -m "Steg Sub-Unit"
+  310  git push
+  311  git pull overleaf master
+  312  git status
+  313  git add Sub_Unit_Implementation/FD/viola_jones.py 
+  314  git commit -m "In-progress: Viola-Jones"
+  315  git push 
+  316  git status
+  317  rm -rf site-packages/
+  318  rm -rf site-packages/
+  319  rm -rf site-packages/
+  320  rm -rf site-packages/
+  321  git clone https://github.com/Umuzi-org/tech-department.git
+  322  cd tech-department/
+  323  ls
+  324  git branch
+  325  git branch -a
+  326  git checkout project/git-basic-exercises
+  327  git checkout -b project/git-basic-exercises
+  328  git remote -v
+  329  git log
+  330  cd ..
+  331  ls
+  332  rm -rf git-basic-exercsies/
+  333  cd git-basic-exercsies/
+  334  git init
+  335  clear
+  336  touch README.md
+  337  git add *
+  338  git commit -m "initial commit"
+  339  nano README.md
+  340  git add *
+  341  git commit -m "second commit"
+  342  nano README.md
+  343  git status
+  344  git add *
+  345  git commit -m "third commit"
+  346  git lgo
+  347  git log
+  348  git checkout -b milkshake-flavours
+  349  nano milkshakes.md
+  350  git status
+  351  git add*
+  352  git add *
+  353  git commit -m "added initial flavours"
+  354   git log
+  355  git checkout m
+  356  git checkout master 
+  357  git status
+  358  git checkout -b history
+  359  history > history.txt
+  360  git add *
+  361  git commit -m "added history"
+  362  git log
+  363  nano README.md 
+  364  git status
+  365  git commit -a -m "random readme changes"
+  366  git status
+  367  cd ..
+  368  rm -rf git-basic-exercsies/
+  369  cd git-basic-exercsies/
+  370  git init
+  371  touch README.md
+  372  ls -a
+  373  git status
+  374  git log
+  375  git add *
+  376  git status
+  377  git status
+  378  git commit -m "initial commit"
+  379  nano README.md 
+  380  git commit -a -m "second commit"
+  381  nano README.md 
+  382  git commit -a -m "third commit"
+  383  git log
+  384  git checkout 77abf7
+  385  git checkout master
+  386  clear
+  387  git status
+  388  cat README.md 
+  389  git checkout -b milkshake-flavours
+  390  nan milkshakes.md
+  391  nano milkshakes.md
+  392  git add *
+  393  git commit -m "added initial flavours"
+  394  git checkout master 
+  395  git checkout -b history
+  396  git log
+  397  git branch
+  398  history > history.txt
+  399  git add * 
+  400  git commit -m "added history"
+  401  git log
+  402  git checkout milkshake-flavours 
+  403  git log
+  404  nano README.md 
+  405  git commit -a -m "random readme changes"
+  406  checkout history 
+  407  git checkout history 
+  408  cat README.md 
+  409  rm README.md && echo "booya" > README.md
+  410  git commit -a -m "rewrote readme"
+  411  checkout master
+  412  git log
+  413  git checkout master
+  414  git log
+  415  git checkout milkshake-flavours 
+  416  git log
+  417  git checkout history
+  418  git log
+  419  git checkout master
+  420  git merge milkshake-flavours
+  421  git branch
+  422  git merge history
+  423  git merge
+  424  git commit -m "resolved" conflicts
+  425  git commit
+  426  git branch
+  427  git checkout history 
+  428  git merge master
+  429  git branch
+  430  git remote add origin https://github.com/ShahSubhan/git-basic-exercises.git
+  431  git branch -M master 
+  432  git branch
+  433  cd ..
+  434  rm -rf git-basic-exercsies/
+  435  cd git-basic-exercsies/
+  436  git init
+  437  touch README.md
+  438  git add *
+  439  git commit -m "initial commit"
+  440  nano README.md 
+  441  git commit -a -m "second commit"
+  442  nano README.md 
+  443  git commit -a -m "third commit"
+  444  git checkout -b milkshake-flavours
+  445  git branch
+  446  nano milkshake.md
+  447  git add *
+  448  git commit -m "added initial flavours"
+  449  git checkout master
+  450  git checkout -b history
+  451  history > history.txt
